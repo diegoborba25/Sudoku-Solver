@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+<!-- Bloco de conteúdo a ser interpretado pelo python -->
+{% block conteudo %}
+<form action="#" method="POST">
+<table id="grid">
+  <tbody>
+    {% for i in idList%}
+    <tr>
+      {% for x in i%}
+      <td><input id="{{x}}"  type="text" name="{{x}}" value="0"></td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<button type="submit" value="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
